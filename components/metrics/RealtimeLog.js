@@ -106,7 +106,7 @@ export default function RealtimeLog({ data, websites, websiteId }) {
     if (event_type) {
       return (
         <div>
-          <Tag>{event_type}</Tag> {event_value}
+          <Tag>{event_type}</Tag> {JSON.stringify(event_value)}
         </div>
       );
     }

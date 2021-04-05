@@ -19,7 +19,7 @@ CREATE TABLE `event` (
     `created_at` TIMESTAMP(0) DEFAULT CURRENT_TIMESTAMP(0),
     `url` VARCHAR(500) NOT NULL,
     `event_type` VARCHAR(50) NOT NULL,
-    `event_value` VARCHAR(50) NOT NULL,
+    `event_value` JSON NOT NULL,
 INDEX `event_created_at_idx`(`created_at`),
 INDEX `event_session_id_idx`(`session_id`),
 INDEX `event_website_id_idx`(`website_id`),

@@ -57,7 +57,7 @@ create table event (
     created_at timestamp default current_timestamp,
     url varchar(500) not null,
     event_type varchar(50) not null,
-    event_value varchar(50) not null,
+    event_value json not null,
     foreign key (website_id) references website(website_id) on delete cascade,
     foreign key (session_id) references session(session_id) on delete cascade
 ) ENGINE=InnoDB COLLATE=utf8_general_ci;
